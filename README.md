@@ -1,6 +1,6 @@
 
 
-# * Sales Forecasting using LSTM on AWS SageMaker**  
+#  **Sales Forecasting using LSTM on AWS SageMaker**  
 
 ## **Project Overview**  
 This project aims to analyze the impact of weather conditions on burger sales and forecast future sales using an LSTM model. The model is trained and deployed on AWS SageMaker, utilizing data stored in an Amazon RDS MySQL database.  
@@ -81,11 +81,44 @@ database:
 - Use the deployed SageMaker endpoint for real-time forecasting.  
 
 ## **Key Takeaways**  
-- Fetching data from **MySQL (Amazon RDS) to Python**.  
+- Fetching data from **MySQL to Python**.  
 - Understanding the impact of weather on sales.  
 - Implementing **LSTM models** for time-series forecasting.  
 - Deploying ML models on **AWS SageMaker**.  
 - Making predictions using SageMaker endpoints.  
+
+
+## **Key Learnings from this Project**  
+
+This project provided hands-on experience with the end-to-end machine learning workflow, from data acquisition to deployment. The key learnings include:  
+
+1. **Data Extraction & Preprocessing**  
+   - Connecting to an **Amazon RDS MySQL database** using `pymysql` to fetch large datasets efficiently.  
+   - Handling **time-series data**, performing feature engineering, and normalizing data using **QuantileTransformer**.  
+
+2. **Exploratory Data Analysis (EDA)**  
+   - Understanding **autocorrelation and partial correlation** in time-series forecasting.  
+   - Identifying **trends, seasonality, and anomalies** in sales data through visualization techniques.  
+
+3. **Model Development**  
+   - Implementing a **LightGBM baseline model** to assess feature importance.  
+   - Designing and optimizing an **LSTM model** for sales forecasting, including windowing techniques and hyperparameter tuning.  
+
+4. **AWS SageMaker for Model Training & Deployment**  
+   - Leveraging **AWS SageMaker** for scalable and efficient model training.  
+   - Saving and loading models using **AWS S3**.  
+   - Deploying the trained LSTM model as a **SageMaker endpoint** for real-time inference.  
+
+5. **Model Deployment & Serving**  
+   - Creating a REST API using **SageMaker Inference Endpoints** to serve predictions.  
+   - Making predictions via API calls and testing inference latency.  
+
+6. **Production-Ready Machine Learning Pipeline**  
+   - Understanding best practices for deploying ML models in **cloud environments**.  
+   - Managing credentials and secure database connections using **config files**.  
+   - Exploring **MLOps concepts** for continuous model improvement.  
+
+This project solidified the understanding of **AWS cloud services, time-series forecasting, model deployment, and production ML workflows**. 
 
 ## **Future Enhancements**  
 - Experimenting with alternative time-series models (e.g., Prophet, Transformer-based models).  
